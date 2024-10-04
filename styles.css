@@ -72,7 +72,8 @@ body {
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-}
+    animation-duration: 1s;
+    }
 
 header p {
     font-size: 1.25rem;
