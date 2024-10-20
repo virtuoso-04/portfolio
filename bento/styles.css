@@ -258,3 +258,107 @@ video {
         height: 30px;
     }
 }
+body {
+    animation: fadeIn 2s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .bento-box {
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .bento-box:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  .bento-box:nth-child(1) {
+    animation: slideInFromLeft 1s;
+  }
+  
+  .bento-box:nth-child(2) {
+    animation: slideInFromRight 1s;
+  }
+  
+  .bento-box:nth-child(3) {
+    animation: slideInFromTop 1s;
+  }
+  
+  .bento-box:nth-child(4) {
+    animation: slideInFromBottom 1s;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .carousel-slide {
+    animation: slideIn 10s infinite;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-100%);
+    }
+    40% {
+      transform: translateX(-200%);
+    }
+    60% {
+      transform: translateX(-300%);
+    }
+    80% {
+      transform: translateX(-400%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @media (max-width: 768px) {
+    .bento-box {
+      transition: transform 0.1s, opacity 0.1s;
+    }
+    .carousel-slide {
+      animation: slideIn 5s infinite;
+    }
+  }
